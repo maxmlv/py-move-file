@@ -4,7 +4,9 @@ import os
 def move_file(command: str) -> None:
     cmd_parts = command.split(" ")
     if len(cmd_parts) != 3:
-        raise ValueError("Invalid command: must be -> mv <source> <destination>")
+        raise ValueError(
+            "Invalid command: must be -> mv <source> <destination>"
+        )
     cmd, source, dest = cmd_parts
     if cmd != "mv":
         raise ValueError("Invalid command: command must be 'mv'")
